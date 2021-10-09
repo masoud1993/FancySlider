@@ -1,4 +1,4 @@
-package com.masa.fancyslider
+package com.masa.fancyslider.utils
 
 import android.content.Context
 import android.media.MediaPlayer

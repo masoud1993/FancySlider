@@ -4,10 +4,10 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Bitmap
 import android.util.AttributeSet
-import android.util.Log
-import androidx.lifecycle.Lifecycle
-import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
+import com.masa.fancyslider.adapter.SliderAdapter
+import com.masa.fancyslider.animations.CubeInScalingAnimation
+import com.masa.fancyslider.utils.Utils
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
@@ -47,6 +47,7 @@ class FancySlider(context: Context, attrs: AttributeSet) : ViewPager(context, at
     fun setItems(items: MutableList<Any>){
         this.items = items
         adapter = SliderAdapter(context, items)
+        setPageTransformer(true, CubeInScalingAnimation())
         setAdapter(adapter)
         animateSlider()
     }

@@ -1,4 +1,4 @@
-package com.masa.fancyslider
+package com.masa.fancyslider.adapter
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -11,6 +11,7 @@ import android.widget.VideoView
 import androidx.annotation.NonNull
 import androidx.viewpager.widget.PagerAdapter
 import com.bumptech.glide.Glide
+import com.masa.fancyslider.R
 import java.util.*
 
 class SliderAdapter (private val context: Context, private val items: MutableList<Any>) : PagerAdapter() {
