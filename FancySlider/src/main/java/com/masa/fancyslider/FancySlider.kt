@@ -14,8 +14,7 @@ import kotlin.coroutines.CoroutineContext
 import android.view.animation.DecelerateInterpolator
 
 import android.widget.Scroller
-
-
+import com.masa.fancyslider.animations.HingeAnimation
 
 
 @SuppressLint("ClickableViewAccessibility")
@@ -54,7 +53,7 @@ class FancySlider(context: Context, attrs: AttributeSet) : ViewPager(context, at
     fun setItems(items: MutableList<Any>){
         this.items = items
         adapter = SliderAdapter(context, items)
-        setPageTransformer(true, CubeInScalingAnimation())
+        setPageTransformer(true, HingeAnimation())
         setAdapter(adapter)
         animateSlider()
     }
