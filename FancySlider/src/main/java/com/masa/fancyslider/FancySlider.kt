@@ -15,6 +15,7 @@ import android.view.animation.DecelerateInterpolator
 
 import android.widget.Scroller
 import com.masa.fancyslider.animations.HingeAnimation
+import com.masa.fancyslider.animations.TossAnimation
 
 
 @SuppressLint("ClickableViewAccessibility")
@@ -53,7 +54,7 @@ class FancySlider(context: Context, attrs: AttributeSet) : ViewPager(context, at
     fun setItems(items: MutableList<Any>){
         this.items = items
         adapter = SliderAdapter(context, items)
-        setPageTransformer(true, HingeAnimation())
+        setPageTransformer(true, TossAnimation())
         setAdapter(adapter)
         animateSlider()
     }

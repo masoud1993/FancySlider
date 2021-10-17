@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
 
         val slider  = findViewById<FancySlider>(R.id.slider)
 
-        slider.setScrollDuration(500)
+        slider.setScrollDuration(1000)
         slider.setItems(mutableListOf(
             BitmapFactory.decodeResource(resources, R.drawable.slider1),
             BitmapFactory.decodeResource(resources, R.drawable.slider2),
