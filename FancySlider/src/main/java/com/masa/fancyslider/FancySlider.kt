@@ -6,16 +6,13 @@ import android.graphics.Bitmap
 import android.util.AttributeSet
 import androidx.viewpager.widget.ViewPager
 import com.masa.fancyslider.adapter.SliderAdapter
-import com.masa.fancyslider.animations.CubeInScalingAnimation
-import com.masa.fancyslider.animations.CubeOutScalingAnimation
 import com.masa.fancyslider.utils.Utils
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 import android.view.animation.DecelerateInterpolator
 
 import android.widget.Scroller
-import com.masa.fancyslider.animations.HingeAnimation
-import com.masa.fancyslider.animations.TossAnimation
+import com.masa.fancyslider.animations.*
 
 
 @SuppressLint("ClickableViewAccessibility")
@@ -54,7 +51,7 @@ class FancySlider(context: Context, attrs: AttributeSet) : ViewPager(context, at
     fun setItems(items: MutableList<Any>){
         this.items = items
         adapter = SliderAdapter(context, items)
-        setPageTransformer(true, TossAnimation())
+        setPageTransformer(true, GateAnimation())
         setAdapter(adapter)
         animateSlider()
     }
