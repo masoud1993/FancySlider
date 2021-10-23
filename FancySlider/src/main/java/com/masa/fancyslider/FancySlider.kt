@@ -51,7 +51,7 @@ class FancySlider(context: Context, attrs: AttributeSet) : ViewPager(context, at
     fun setItems(items: MutableList<Any>){
         this.items = items
         adapter = SliderAdapter(context, items)
-        setPageTransformer(true, GateAnimation())
+        setPageTransformer(true, FidgetSpinnerAnimation())
         setAdapter(adapter)
         animateSlider()
     }
